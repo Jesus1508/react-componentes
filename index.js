@@ -19,16 +19,16 @@ class App extends Component {
     };
   }
 
+  updateCounter() {
+    this.setState({ contador: this.state.contador + 1 });
+  }
+
   render() {
     console.log(this.props);
     return (
       <>
         <p>Contador: {this.state.contador}</p>
-        <button
-          onClick={() => this.setState({ contador: this.state.contador + 1 })}
-        >
-          Sumar
-        </button>
+        <button onClick={() => this.updateCounter}>Sumar</button>
       </>
     );
   }
