@@ -16,7 +16,7 @@ class App extends Component {
     super(props);
     this.state = {
       contador: 0,
-      updateAt = null
+      updateAt: null,
     };
   }
 
@@ -26,10 +26,10 @@ class App extends Component {
 
   componentDidUpdate(prevProps, prevState) {
     console.log(prevState, this.state);
-    if (prevState.contador !== this.state.contador){
+    if (prevState.contador !== this.state.contador) {
       this.setState({
-        updateAt: new Date()
-      })
+        updateAt: new Date(),
+      });
     }
     console.log('Actualizado!!');
   }
