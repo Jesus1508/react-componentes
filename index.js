@@ -19,6 +19,15 @@ class App extends Component {
     };
   }
 
+  componentDidMount() {
+    console.log('Fui creado!!');
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    console.log(prevProps, prevState);
+    console.log('Actualizado!!');
+  }
+
   updateCounter = () => {
     this.setState({ contador: this.state.contador + 1 });
   };
