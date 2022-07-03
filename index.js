@@ -34,6 +34,15 @@ class App extends Component {
     console.log('Actualizado!!');
   }
 
+  getSnapshotBeforeUpdate() {
+    console.log('Antes de actualizar DOM');
+    return 3;
+  }
+
+  componentWillUnmount() {
+    alert('Adios');
+  }
+
   updateCounter = () => {
     this.setState({ contador: this.state.contador + 1 });
   };
