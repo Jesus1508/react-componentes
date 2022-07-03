@@ -1,10 +1,15 @@
 import * as React from 'react';
 import { Component } from 'react';
 import { render } from 'react-dom';
+import propTypes from 'prop-types';
 
 class App extends Component {
   static defaultProps = {
     nme: 'Componente Jesus',
+  };
+
+  static propTypes = {
+    name: propTypes.string,
   };
 
   render() {
