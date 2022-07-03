@@ -5,18 +5,22 @@ import { render } from 'react-dom';
 
 let Example = (props) => {
   let [contador, setContador] = useState(0);
+
   useEffect(() => {
     console.log('Fui Actualizado useEffect');
+    return () => {
+      alert('useEffect');
+    };
   }, []);
 
   return (
     <>
-      <p>Contador: {this.state.contador}</p>
-      <button onClick={setContador(contador + 1)}>Sumar</button>
+      <p>Contador: {contador}</p>
+      <button onClick={() => setContador(contador + 1)}>Sumar</button>
     </>
   );
 };
-
+render(<Example />, document.getElementById('root'));
 // class App extends Component {
 // static defaultProps = {
 //   nme: 'Componente Jesus',
@@ -82,6 +86,5 @@ let Example = (props) => {
 // }
 // }
 
-render(<Example />, document.getElementById('root'));
 // render(<App />, document.getElementById('root'));
 // render(<App name={'Jesus'} />, document.getElementById('root'));
