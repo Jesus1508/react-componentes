@@ -15,7 +15,7 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      cpntador: 0,
+      contador: 0,
     };
   }
 
