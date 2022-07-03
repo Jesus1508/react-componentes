@@ -34,10 +34,10 @@ class App extends Component {
     console.log('Actualizado!!');
   }
 
-  getSnapshotBeforeUpdate() {
-    console.log('Antes de actualizar DOM');
-    return 3;
-  }
+  // getSnapshotBeforeUpdate() {
+  //   console.log('Antes de actualizar DOM');
+  //   return 3;
+  // }
 
   componentWillUnmount() {
     alert('Adios');
@@ -48,7 +48,7 @@ class App extends Component {
   };
 
   render() {
-    console.log(this.props);
+    // console.log(this.props);
     return (
       <>
         <p>Contador: {this.state.contador}</p>
