@@ -25,13 +25,13 @@ class App extends Component {
   }
 
   componentDidUpdate(prevProps, prevState) {
-    console.log(prevState, this.state);
-    if (prevState.contador !== this.state.contador) {
-      this.setState({
-        updateAt: new Date(),
-      });
-    }
-    console.log('Actualizado!!');
+    // console.log(prevState, this.state);
+    // if (prevState.contador !== this.state.contador) {
+    //   this.setState({
+    //     updateAt: new Date(),
+    //   });
+    // }
+    // console.log('Actualizado!!');
   }
 
   // getSnapshotBeforeUpdate() {
