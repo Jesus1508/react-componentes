@@ -23,10 +23,14 @@ class App extends Component {
 
   componentDidMount() {
     console.log('Fui creado!!');
-    let intervalo = setInterval(
-      () => this.setState({ contador: this.state.contador + 1 }),
-      1000
-    );
+    // let intervalo = setInterval(
+    //   () => this.setState({ contador: this.state.contador + 1 }),
+    //   1000
+    // );
+
+    // this.setState({
+    //   intv: intervalo,
+    // });
   }
 
   componentDidUpdate(prevProps, prevState) {
@@ -46,6 +50,7 @@ class App extends Component {
 
   componentWillUnmount() {
     // alert('Adios');
+    // clearInterval(this.state.intv);
   }
 
   updateCounter = () => {
