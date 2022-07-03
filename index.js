@@ -12,9 +12,25 @@ class App extends Component {
     name: propTypes.string,
   };
 
+  constructor(props) {
+    super(props);
+    this.state = {
+      cpntador: 0,
+    };
+  }
+
   render() {
     console.log(this.props);
-    return <p>Hola mundo</p>;
+    return (
+      <>
+        <p>Contador: {this.state.contador}</p>
+        <button
+          onClick={() => this.setState({ contador: this.state.contador + 1 })}
+        >
+          Sumar
+        </button>
+      </>
+    );
   }
 }
 
